@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create your own gift list!</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">my gift list</a></li>
+                <li><a href="/admin/create">Add a gift suggestion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="/admin/create" method="POST">
+            <input type="text" name="gift">
+            <button type="submit">Add this to my list!</button>
+        </form>
+    </main>
+</body>
+</html>
