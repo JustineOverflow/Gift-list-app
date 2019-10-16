@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> <%= pageTitle %> </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+<header class="main-header">
+    <nav class="main-header_nav">
+        <ul class="main-header_item-list">
+            <li class="main-header_item"><a class= "active" href="/">My gift list</a></li>
+            <li class="main-header_item"><a href="/admin/create">Add a gift</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <form class="add-a-gift" action="/admin/create" method="POST">
+            <div class="form-control">
+                <label for="gift-name">Gift: </label>
+                <input type="text" name="name" id="gift-name">
+            </div>
+            <button type="submit">Add this to my list!</button>
+        </form>
+    </main>
+</body>
+
+</html>

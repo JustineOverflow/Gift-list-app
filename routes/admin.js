@@ -4,16 +4,21 @@ const express = require('express');
 
 const router = express.Router();
 
+const gifts = [];
+
 router.get('/create', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'create.html'));
+    res.render('create.ejs', {
+        pageTitle: 'Add a gift',
+    });
 });
 
 router.post('/create', (req, res, next) => {
-    console.log(req.body);
+    gifts.push(req.body);
     res.redirect('/');
 });
 
-module.exports = router;
+exports.routes = router;
+exports.gifts = gifts;
 
 
 

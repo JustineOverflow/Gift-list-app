@@ -1,0 +1,37 @@
+
+.add-a-gift {
+    width: 30rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.form-control {
+    margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input {
+    display: block;
+    width: 100%;
+}
+
+.form-control input {
+    border: 1px  solid firebrick;
+    font-family: Didot;
+    border-radius: 2px;
+}
+
+button {
+    font-family: Didot;
+    border: 1px solid firebrick;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    color: firebrick;
+}
+
+button:hover,
+button:active {
+    background-color: firebrick;
+    color: bisque;
+}
