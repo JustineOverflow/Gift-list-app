@@ -3,13 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Create your own gift list!</title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Didot;
+        }
+
+        main {
+            padding: 0 3rem;
+        }
+
+        .main-header {
+            width: 100%;
+            height: 4rem;
+            background-color: firebrick;
+            padding: 0 2rem;
+        }
+
+        .main-header_nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-header_item-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-header_item a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .main-header_item {
+            margin: 0 1rem;
+            padding: 0;
+        }
+
+        .main-header_item a:hover,
+        .main-header_item a:active,
+        .main-header_item a:active  {
+            color: bisque;
+        }
+
+    </style>
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="/">my gift list</a></li>
-            <li><a href="/admin/create">Add a gift suggestion</a></li>
+<header class="main-header">
+    <nav class="main-header_nav">
+        <ul class="main-header_item-list">
+            <li class="main-header_item"><a class= "active" href="/">My gift list</a></li>
+            <li class="main-header_item"><a href="/admin/create">Add a gift suggestion</a></li>
         </ul>
     </nav>
 </header>
