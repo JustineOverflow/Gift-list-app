@@ -9,7 +9,7 @@
 - Once they select a gift, it is deleted from the list to avoid double gift
 - The author of the list cannot see the gifts selected by the friends,  so they have the surprise. 
 
-## Languages used
+## Technologies used
 
 - JavaScript
 - NodeJS
