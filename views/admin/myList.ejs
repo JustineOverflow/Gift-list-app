@@ -1,0 +1,32 @@
+<%-include('../include/head.ejs')%>
+
+</head>
+<body>
+
+<%- include('../include/nav.ejs') %>
+
+<main>
+
+    <h1>My list</h1>
+    <ol>
+    <%
+    if (hasGifts) {
+    %>
+    <h2>List of my desired gifts: </h2>
+    <%
+        for (var i = 0; i < gifts.length; i++) {
+    %>
+            <li> <%= gifts[i].name %> </li>
+    <%
+        }
+    } else {
+    %>
+        <p> You did not add any gift in your list... </p>
+    <%
+    }
+    %>
+    </ol>
+</main>
+
+<%- include('../include/footer.ejs') %>
+

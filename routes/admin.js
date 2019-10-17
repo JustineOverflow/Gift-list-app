@@ -2,21 +2,26 @@ const path = require('path');
 
 const express = require('express');
 
-const createControllers = require('../controllers/create');
+const adminControllers = require('../controllers/admin');
 
 const router = express.Router();
 
 //admin/create => GET
 
-router.get('/create', createControllers.getCreate);
+router.get('/create', adminControllers.getCreate);
 
 //admin/create => POST
 
-router.post('/create', createControllers.postCreate);
+router.post('/create', adminControllers.postCreate);
+
+//admin/cart => GET
+
+router.get('/cart', adminControllers.getCart);
+
+//admin/myList => GET
+
+router.get('/myList', adminControllers.getList);
 
 module.exports = router;
-
-
-
 
 
