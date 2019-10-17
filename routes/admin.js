@@ -2,23 +2,19 @@ const path = require('path');
 
 const express = require('express');
 
+const createControllers = require('../controllers/create');
+
 const router = express.Router();
 
-const gifts = [];
+//admin/create => GET
 
-router.get('/create', (req, res, next) => {
-    res.render('create.ejs', {
-        pageTitle: 'Add a gift',
-    });
-});
+router.get('/create', createControllers.getCreate);
 
-router.post('/create', (req, res, next) => {
-    gifts.push(req.body);
-    res.redirect('/');
-});
+//admin/create => POST
 
-exports.routes = router;
-exports.gifts = gifts;
+router.post('/create', createControllers.postCreate);
+
+module.exports = router;
 
 
 
