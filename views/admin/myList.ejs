@@ -1,5 +1,8 @@
 <%-include('../include/head.ejs')%>
 
+<link rel="stylesheet" href="/css/create.css">
+<link rel="stylesheet" href="/css/edit.css">
+
 </head>
 <body>
 
@@ -17,6 +20,13 @@
         for (var i = 0; i < gifts.length; i++) {
     %>
             <li> <%= gifts[i].name %> </li>
+                <p> <em> Details: </em> <%= gifts[i].details %></p>
+                <p> <em> Quantity: </em><%= gifts[i].quantity %></p>
+                <div>
+                    <a href="/admin/<%=gifts[i].id%>" class="btn">Edit</a>
+                    <btn class="btn">Delete</btn>
+                </div>
+        <p></p>
     <%
         }
     } else {

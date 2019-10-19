@@ -8,14 +8,17 @@ exports.getCreate = (request, response, next) => {
 };
 
 exports.postCreate = (request, response, next) => {
-    const gift = new Gift(request.body.name);
+    const name = request.body.name;
+    const details = request.body.details;
+    const quantity = request.body.quantity;
+    const gift = new Gift(name, details, quantity);
     gift.save();
     response.redirect('/admin/myList');
 };
 
-exports.getList = (request, respond, next) => {
+exports.getList = (request, response, next) => {
     Gift.fetchAll(gifts => {
-        respond.render('admin/myList', {
+        response.render('admin/myList', {
             gifts: gifts,
             pageTitle: 'My list',
             path: '/admin/myList.ejs',
@@ -24,10 +27,20 @@ exports.getList = (request, respond, next) => {
     });
 };
 
+exports.getGift = (request, response, next) => {
+    const giftID = request.params.giftId;
+    console.log(Gift.findById(giftID, gift => {
+        response.render('admin/edit', {
+            gift: gift,
+            path: '/admin/myList',
+        });
+    }));
+};
+
 exports.getCart = (request, response, next) => {
     response.render('admin/cart', {
         pageTitle: "cart",
         path: '/admin/cart.ejs',
     });
-};
+} ;
 

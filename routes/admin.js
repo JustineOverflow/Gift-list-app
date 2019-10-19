@@ -22,6 +22,13 @@ router.get('/cart', adminControllers.getCart);
 
 router.get('/myList', adminControllers.getList);
 
-module.exports = router;
+//admin/productID => GET
 
+router.get('/:giftId', adminControllers.getGift);
+
+//admin/delete => GET
+
+router.get('/delete');
+
+module.exports = router;
 

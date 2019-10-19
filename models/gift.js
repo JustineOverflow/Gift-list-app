@@ -17,9 +17,12 @@ const getGiftsFromFile = callback => {
     });
 };
 
-module.exports = class gift {
-    constructor(name) {
+module.exports = class Gift {
+    constructor(name, details, quantity) {
         this.name = name;
+        this.details = details;
+        this.quantity = quantity;
+        this.id = Math.random().toString();
     }
 
     save() {
@@ -33,5 +36,12 @@ module.exports = class gift {
 
     static fetchAll(cb) {
         getGiftsFromFile(cb);
+    }
+
+    static findById(id, callback) {
+        getGiftsFromFile(gifts => {
+            const gift = gifts.find(p => p.id === id);
+            callback(gift);
+        });
     }
 };
