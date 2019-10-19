@@ -39,6 +39,11 @@ main {
     padding: 0;
 }
 
+.main-header_item_right {
+    margin-right: 0rem;
+    padding: 0;
+}
+
 .main-header_item a:hover,
 .main-header_item a:active,
 .main-header_item a:active  {

@@ -1,0 +1,30 @@
+<%- include('include/head.ejs') %>
+<link rel="stylesheet" href="/css/login.css">
+
+</head>
+
+<body>
+
+<%- include('include/nav.ejs') %>
+
+<main>
+    <h1>We are happy to have you join!</h1>
+    <h2><em>Please create your account: </em></h2>
+    <form class="signup" action="/signup" method="POST">
+        <div class="form-control">
+            <label for="email">Email </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="form-control">
+            <label for="password">Password </label>
+            <input type="text" name="password" id="password">
+        </div>
+        <div class="form-control">
+            <label for="password">Confirm password </label>
+            <input type="text" name="password" id="password">
+        </div>
+        <button type="submit">let's join!</button>
+    </form>
+</main>
+
+<%- include('include/footer.ejs') %>

@@ -4,3 +4,17 @@ exports.getHome = (request, respond, next) => {
                 path: '/',
         });
 };
+
+exports.getLog = (request, respond, next) => {
+        respond.render('login.ejs', {
+                pageTitle: "login",
+                path: '/login',
+        });
+};
+
+exports.getSign = (request, respond, next) => {
+        respond.render('signup.ejs', {
+                pageTitle: "signup",
+                path:'/signup',
+        });
+};

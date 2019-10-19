@@ -1,0 +1,32 @@
+.form-control {
+    margin: 2rem 0;
+}
+
+.form-control label,
+.form-control input {
+    display: block;
+    width: 30%;
+    margin-bottom: 0.25rem;
+}
+
+.form-control input {
+    border: 1px  solid firebrick;
+    font-family: Didot;
+    border-radius: 2px;
+    font-size: large;
+}
+
+button {
+    font-family: Didot;
+    font-size: large;
+    border: 1px solid firebrick;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    color: firebrick;
+}
+
+button:hover,
+button:active {
+    background-color: firebrick;
+    color: bisque;
