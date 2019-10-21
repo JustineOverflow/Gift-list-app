@@ -23,8 +23,12 @@
                 <p> <em> Details: </em> <%= gifts[i].details %></p>
                 <p> <em> Quantity: </em><%= gifts[i].quantity %></p>
                 <div>
-                    <a href="/admin/<%=gifts[i].id%>" class="btn">Edit</a>
-                    <btn class="btn">Delete</btn>
+                    <a href="/admin/<%=gifts[i].id%>" class="btn">Detail</a>
+                    <form action="/admin/delete" method="POST">
+                        <input type="hidden" value="<%=gifts[i].id%>" name="giftId">
+                        <button class="btn" type="submit">Delete</button>
+                    </form>
+                    <a href="/admin/edit/<%= gifts[i].id %>" class="btn">Edit</a>
                 </div>
         <p></p>
     <%

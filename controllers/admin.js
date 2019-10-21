@@ -3,7 +3,8 @@ const Gift = require('../models/gift');
 exports.getCreate = (request, response, next) => {
     response.render('admin/create', {
         pageTitle: 'Add a gift',
-        path: '/admin/myList.ejs',
+        path: '/admin/myList',
+        editing: false,
     });
 };
 
@@ -30,17 +31,55 @@ exports.getList = (request, response, next) => {
 exports.getGift = (request, response, next) => {
     const giftID = request.params.giftId;
     console.log(Gift.findById(giftID, gift => {
-        response.render('admin/edit', {
+        response.render('admin/detail', {
             gift: gift,
             path: '/admin/myList',
         });
     }));
 };
 
+exports.getEdit = (request, response, next) => {
+    const giftID = request.params.giftId;
+    console.log(Gift.findById(giftID, gift => {
+        if (!gift) {
+            return response.redirect ('admin/myList');
+        }
+        response.render('admin/create', {
+            gift: gift,
+            path: '/admin/create',
+            editing: true,
+        });
+    }));
+
+};
+
+exports.postEdit = (request, response, next) => {
+    const giftId = request.body.giftId;
+    const updatedName = request.body.name;
+    const updatedDetails = request.body.details;
+    const updatedQuantity = request.body.quantity;
+    const updatedGift = new Gift(
+        giftId,
+        updatedName,
+        updatedDetails,
+        updatedQuantity
+    );
+
+    updatedGift.update();
+    response.redirect('/admin/myList');
+
+};
+
+exports.postDelete = (request, response, next) => {
+    const giftId = request.body.giftId;
+    Gift.deleteById(giftId);
+    response.redirect('/admin/myList');
+};
+
 exports.getCart = (request, response, next) => {
     response.render('admin/cart', {
         pageTitle: "cart",
-        path: '/admin/cart.ejs',
+        path: '/admin/cart',
     });
-} ;
+};
 

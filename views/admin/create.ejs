@@ -9,20 +9,24 @@
         <%- include('../include/nav.ejs') %>
 
     <main>
-        <form class="add-a-gift" action="/admin/create" method="POST">
+        <form class="add-a-gift" action="/admin/<% if (editing) {  %>edit <% } else { %>create<% } %>" method="POST">
             <div class="form-control">
                 <label for="gift-name">Gift: </label>
-                <input type="text" name="name" id="gift-name">
+                <input type="text" name="name" id="gift-name" value="<% if (editing) {  %><%=gift.name%><% } %>">
             </div>
             <div class="form-control">
                 <label for="gift-details">Details: </label>
-                <input type="text" name="details" id="gift-details">
+                <input type="text" name="details" id="gift-details" value="<% if (editing) {  %><%=gift.details%><% } %>">
             </div>
             <div class="form-control">
                 <label for="gift-quantity">Quantity: </label>
-                <input type="number" name="quantity" id="gift-quantity">
+                <input type="number" name="quantity" id="gift-quantity" value="<% if (editing) {  %><%=gift.quantity%><% } %>">
             </div>
-            <button type="submit">Add this to my list!</button>
+            <% if (editing) { %>
+                <input type="hidden" value="<%= gift.id %>" name="giftId">
+                <% } %>
+
+            <button type="submit"><% if (editing) { %> Update product <% } else { %>Add this to my list!<% } %></button>
         </form>
     </main>
 

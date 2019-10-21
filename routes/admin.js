@@ -26,9 +26,15 @@ router.get('/myList', adminControllers.getList);
 
 router.get('/:giftId', adminControllers.getGift);
 
+//admin/create/id => GET
+
+router.get('/edit/:giftId', adminControllers.getEdit);
+
+router.post('/edit', adminControllers.postEdit);
+
 //admin/delete => GET
 
-router.get('/delete');
+router.post('/delete', adminControllers.postDelete);
 
 module.exports = router;
 
