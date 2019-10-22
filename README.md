@@ -15,6 +15,8 @@
 - NodeJS
 - HTML
 - CSS
+- mySQL 
+- Sequelize
 
 ### Ongoing project
 
