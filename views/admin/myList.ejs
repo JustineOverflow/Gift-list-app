@@ -12,16 +12,12 @@
 
     <h1>My list</h1>
     <ol>
-    <%
-    if (hasGifts) {
-    %>
+
     <h2>List of my desired gifts: </h2>
     <%
         for (var i = 0; i < gifts.length; i++) {
     %>
             <li> <%= gifts[i].name %> </li>
-                <p> <em> Details: </em> <%= gifts[i].details %></p>
-                <p> <em> Quantity: </em><%= gifts[i].quantity %></p>
                 <div>
                     <a href="/admin/<%=gifts[i].id%>" class="btn">Detail</a>
                     <form action="/admin/delete" method="POST">
@@ -33,11 +29,6 @@
         <p></p>
     <%
         }
-    } else {
-    %>
-        <p> You did not add any gift in your list... </p>
-    <%
-    }
     %>
     </ol>
 </main>

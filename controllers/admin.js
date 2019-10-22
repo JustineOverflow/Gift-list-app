@@ -13,29 +13,39 @@ exports.postCreate = (request, response, next) => {
     const details = request.body.details;
     const quantity = request.body.quantity;
     const gift = new Gift(name, details, quantity);
-    gift.save();
-    response.redirect('/admin/myList');
+    gift
+        .save()
+        .then(() => {
+        response.redirect('admin/myList');
+    })
+        .catch(error =>
+            console.log(error)
+        );
+
 };
 
 exports.getList = (request, response, next) => {
-    Gift.fetchAll(gifts => {
+    Gift.fetchAll()
+        .then(([rows, fieldData]) => {
         response.render('admin/myList', {
-            gifts: gifts,
+            gifts: rows,
             pageTitle: 'My list',
             path: '/admin/myList.ejs',
-            hasGifts: gifts.length > 0,
         });
-    });
+    })
+        .catch(error => console.log(error));
 };
 
 exports.getGift = (request, response, next) => {
     const giftID = request.params.giftId;
-    console.log(Gift.findById(giftID, gift => {
-        response.render('admin/detail', {
-            gift: gift,
-            path: '/admin/myList',
-        });
-    }));
+    Gift.findById(giftID)
+        .then(([gift]) => {
+            response.render('admin/detail', {
+                gift: gift,
+                path: '/admin/myList.ejs'
+            });
+        })
+        .catch(error => console.log(error));
 };
 
 exports.getEdit = (request, response, next) => {
