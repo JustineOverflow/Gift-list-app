@@ -1,6 +1,9 @@
 const Gift = require('../models/gift');
 
 exports.getCreate = (request, response, next) => {
+    if (!request.session.isLoggedIn) {
+        return response.redirect('/login');
+    }
     response.render('admin/create', {
         pageTitle: 'Add a gift',
         path: '/admin/myList',

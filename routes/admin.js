@@ -3,38 +3,25 @@ const path = require('path');
 const express = require('express');
 
 const adminControllers = require('../controllers/admin');
+const isAuth = require('../middleware/is-auth');
 
 const router = express.Router();
 
-//admin/create => GET
+router.get('/create', isAuth, adminControllers.getCreate);
 
-router.get('/create', adminControllers.getCreate);
+router.post('/create', isAuth, adminControllers.postCreate);
 
-//admin/create => POST
+router.get('/cart', isAuth, adminControllers.getCart);
 
-router.post('/create', adminControllers.postCreate);
+router.get('/myList', isAuth, adminControllers.getList);
 
-//admin/cart => GET
+router.get('/:giftId', isAuth, adminControllers.getGift);
 
-router.get('/cart', adminControllers.getCart);
+router.get('/edit/:giftId', isAuth, adminControllers.getEdit);
 
-//admin/myList => GET
+router.post('/edit', isAuth, adminControllers.postEdit);
 
-router.get('/myList', adminControllers.getList);
-
-//admin/productID => GET
-
-router.get('/:giftId', adminControllers.getGift);
-
-//admin/create/id => GET
-
-router.get('/edit/:giftId', adminControllers.getEdit);
-
-router.post('/edit', adminControllers.postEdit);
-
-//admin/delete => GET
-
-router.post('/delete', adminControllers.postDelete);
+router.post('/delete', isAuth, adminControllers.postDelete);
 
 module.exports = router;
 
