@@ -1,33 +1,24 @@
-const database = require('../util/database');
+const Sequelize = require('sequelize');
 
-module.exports = class Gift {
-    constructor(name, details, quantity) {
-        this.name = name;
-        this.details = details;
-        this.quantity = quantity;
-        // this.id = Math.random().toString();
-    }
+const sequelize = require('../util/database');
 
-    save() {
-        return database.execute('INSERT INTO gifts.gifts (name, details, quantity) VALUES (?, ?, ?)',
-            [this.name, this.details, this.quantity]
-        );
-    };
+const Gift = sequelize.define('gift', {
+    id: {
+       type: Sequelize.INTEGER,
+       autoIncrement : true,
+       allowNull : false,
+       primaryKey: true,
+   },
+    name: Sequelize.STRING,
+    details: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
+    quantity : {
+    type: Sequelize.STRING,
+    allowNull: false,
+    },
+});
 
-    update() {
-        database.execute('INSERT INTO gifts.gifts (name, details, quantity) VALUES (?, ?, ?)',
-            [this.name, this.details, this.quantity]
-        );
-    };
+module.exports = Gift;
 
-    static deleteById(id) {
-    }
-
-    static fetchAll() {
-        return database.execute('SELECT * FROM gifts.gifts');
-    }
-
-    static findById(id) {
-        return database.execute('SELECT * FROM gifts.gifts WHERE gifts.id = ?', [id]);
-    }
-};

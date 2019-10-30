@@ -10,4 +10,10 @@ router.get('/login', homeControllers.getLog);
 
 router.get('/signup', homeControllers.getSign);
 
+router.post('/signup', homeControllers.postSign);
+
+router.post('/login', homeControllers.postLog);
+
+router.post('/logout', homeControllers.postLogout);
+
 module.exports = router;

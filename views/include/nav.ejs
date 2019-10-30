@@ -2,23 +2,32 @@
     <nav class="main-header_nav">
         <ul class="main-header_item-list">
             <li class="main-header_item">
-                <a class= "active" href="/">Home</a>
+                <a class="active" href="/">Home</a>
+                <% if (isAuthenticated) { %>
             </li>
             <li class="main-header_item">
-                <a class= "active" href="/admin/myList">My gift list</a>
+                <a class="active" href="/admin/myList">My gift list</a>
             </li>
             <li class="main-header_item">
-                <a href="/admin/create">Add a gift suggestion</a>
+                <a class="active" href="/admin/cart">My cart</a>
             </li>
-            <li class="main-header_item">
-                <a class= "active" href="/admin/cart">My cart</a>
-            </li>
-            <li class="main-header_item">
-                <a class= "active" href="/login">Login!</a>
-            </li>
-            <li class="main-header_item">
-                <a class="active" href="/signup">Signup!</a>
-            </li>
+            <% } %>
+        </ul>
+        <ul class="main-header_item-list">
+            <% if (!isAuthenticated) { %>
+                <li class="main-header_item">
+                    <a class="active" href="/login">Login!</a>
+                </li>
+                <li class="main-header_item">
+                    <a class="active" href="/signup">Signup!</a>
+                </li>
+            <% } else { %>
+                <li class="main-header_item">
+                    <form action="/logout" method="POST">
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            <% } %>
         </ul>
     </nav>
 </header>
