@@ -7,8 +7,8 @@ const session = require('express-session');
 const app = express();
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-
 const store = new SequelizeStore({db: sequelize});
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 

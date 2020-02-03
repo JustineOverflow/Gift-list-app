@@ -55,3 +55,19 @@ main {
 .centered {
     text-align: center;
 }
+
+.user-message {
+    margin: auto;
+    width: 90%;
+    border: 1px solid darkslategray;
+    padding: 1rem;
+    border-radius: 3px;
+    background: aliceblue;
+    text-align: center;
+
+}
+
+.user-message--error{
+   border-color: firebrick;
+    background: aliceblue;
+}

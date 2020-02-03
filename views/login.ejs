@@ -10,8 +10,8 @@
 <main>
     <h1>Welcome back!</h1>
     <h2><em>Please log-in to access your gift list: </em></h2>
-    <form class="login" action="/login" method="POST">
-        <div class="form-control">
+            <form class="login" action="/login" method="POST">
+                <div class="form-control">
             <label for="email">Email </label>
             <input type="email" name="email" id="email">
         </div>
@@ -19,8 +19,11 @@
             <label for="password">Password </label>
             <input type="text" name="password" id="password">
         </div>
-            <button type="submit">Login</button>
+        <button type="submit">Login</button>
     </form>
+    <div class="centered">
+    <a href="/reset">Reset password</a>
+    </div>
 </main>
 
 <%- include('include/footer.ejs') %>

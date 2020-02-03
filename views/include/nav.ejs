@@ -21,7 +21,12 @@
                 <li class="main-header_item">
                     <a class="active" href="/signup">Signup!</a>
                 </li>
-            <% } else { %>
+                <% } else { %>
+                <li class="main-header_item">
+                    <form action="/" method="POST">
+                    <a class="active" href="/"> Delete my account</a>
+                    </form>
+                </li>
                 <li class="main-header_item">
                     <form action="/logout" method="POST">
                         <button type="submit">Logout</button>

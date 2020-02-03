@@ -16,4 +16,14 @@ router.post('/login', homeControllers.postLog);
 
 router.post('/logout', homeControllers.postLogout);
 
+router.get('/reset', homeControllers.getReset);
+
+router.post('/reset', homeControllers.postReset);
+
+router.get('/reset/:token', homeControllers.getNewPassword);
+
+router.post('/newPassword', homeControllers.postNewPassword);
+
+router.post('/deleteUser', homeControllers.postDeleteUser);
+
 module.exports = router;
