@@ -25,14 +25,14 @@ To do so:
 
 ![alt text](public/img/screenshots/landing.png)
 
-- Example // Signing up or loging in:
+- Example // Signing up or logging in:
 
 ![alt text](public/img/screenshots/login.png)
 ![alt text](public/img/screenshots/signup.png)
 
 - Example // Getting the gifts list:  
 
-![alt text](public/img/screenshots/gift list.png)
+![alt text](public/img/screenshots/list.png)
 
 - Example // Having the detail of one list: 
 
