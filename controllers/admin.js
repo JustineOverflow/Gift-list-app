@@ -16,7 +16,7 @@ exports.postCreate = (request, response, next) => {
     const name = request.body.name;
     const details = request.body.details;
     const quantity = request.body.quantity;
-    Gift._create({
+    Gift.create({
         name: name,
         details: details,
         quantity: quantity,

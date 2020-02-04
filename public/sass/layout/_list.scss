@@ -4,6 +4,21 @@
 
 .gift {
 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+
+  &__box {
+    z-index: 1;
+    padding: 2rem 3rem 2rem 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+
+    background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba(white, .25);
+    border-radius: 10px;
+  }
+
   &-title {
     text-align: center;
   }

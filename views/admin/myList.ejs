@@ -17,10 +17,12 @@
         <div class="overlayTextList">
 
             <h1 class="title-list">My list</h1>
+
             <ol>
                 <%
                 for (var i = 0; i < gifts.length; i++) {
                 %>
+                <div class="gift__box">
                     <li class="gift-list-name"> <%= gifts[i].name %> </li>
                     <div>
                         <div class="btnList">
@@ -36,6 +38,7 @@
                 <%
                 }
                 %>
+                </div>
             </ol>
 
             <i class="fas fa-plus"></i>
