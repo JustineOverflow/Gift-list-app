@@ -15,6 +15,7 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const homeRoutes = require('./routes/home');
 const errorController = require('./controllers/error');
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));

@@ -7,7 +7,7 @@ const User = require('../models/user');
 
 const transporter = nodemailer.createTransport(sendGripTransport({
     auth: {
-        api_key: '12345'
+        api_key: process.env.SENDGRID_API_KEY,
     }
 }));
 
@@ -115,7 +115,7 @@ exports.postSign = (request, response, next) => {
 
 exports.getReset = (request, response, next) => {
     response.render('reset.ejs', {
-        pageTitle: "reset",
+        pageTitle: "password forgotten",
         path: '/reset',
         isAuthenticated: false,
     });
@@ -129,14 +129,15 @@ exports.postReset = (request, response, next) => {
         }
         const token = buffer.toString('hex');
         User.findOne
-            ({
+        ({
             where:
                 {email: request.body.email}
-             })
+        })
             .then(user => {
                 if (!user) {
                     return response.redirect('/reset');
                 }
+                console.log(user);
                 user.resetToken = token;
                 user.resetTokenExpiration = Date.now() + 360000;
                 return user.save();
@@ -148,6 +149,9 @@ exports.postReset = (request, response, next) => {
                     subject: 'Gift app: Password reset',
                     html: '<p>You requested a password reset</p> <p> Click this <a href="http://localhost:3000/reset/${token}">link</a>to set a new password.</p>'
                 })
+                    .then(result => {
+                        console.log(result)
+                    })
                     .catch(error => {
                         console.log(error)
                     });
