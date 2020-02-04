@@ -6,18 +6,48 @@
 
 To do so: 
 - Creating a new account (with an email system),
-- logging in to keep track of the list (using sessions with cookies),
+- Logging in to keep track of the list (using sessions with cookies),
 - Editing, deleting the list.
 
 ## Technologies used
 
 - JavaScript
-- NodeJS
+- NodeJS, ExpressJS
 - HTML
-- CSS
+- CSS & Sass
 - mySQL 
 - Sequelize
+- Sendgrid for automatic emails
 
-### Ongoing project
+### Project examples: 
 
-Thanks for your curiosity!
+- Example // The landing page: 
+
+![alt text](public/img/screenshots/landing.png)
+
+- Example // Signing up or loging in:
+
+![alt text](public/img/screenshots/login.png)
+![alt text](public/img/screenshots/signup.png)
+
+- Example // Getting the gifts list:  
+
+![alt text](public/img/screenshots/gift list.png)
+
+- Example // Having the detail of one list: 
+
+![alt text](public/img/screenshots/details.png)
+
+- Example // Editing a gift: 
+
+![alt text](public/img/screenshots/edit.png)
+
+- Example // Adding a gift: 
+
+![alt text](public/img/screenshots/create.png)
+
+...
+
+#### Thank you for reading!
+
+Justine.
