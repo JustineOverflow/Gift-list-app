@@ -2,9 +2,12 @@
 
 ## Project concept
 
-- Creating a list of desired gifts (example: for Christmas, birthdays);
-- Signing up / loging in to keep track of the list (using sessions with cookies);
-- Editing, deleting this list;
+- Creating a list of desired gifts (example: for Christmas, birthdays).
+
+To do so: 
+- Creating a new account (with an email system),
+- logging in to keep track of the list (using sessions with cookies),
+- Editing, deleting the list.
 
 ## Technologies used
 

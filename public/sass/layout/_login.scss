@@ -17,6 +17,7 @@
 }
 
 .subtitleLogin {
+  padding-bottom: 2rem;
     position: relative;
     z-index: 1;
     font-size: 2.5rem;
@@ -27,8 +28,15 @@
     position: relative;
     z-index: 1;
     font-size: 1.5rem;
-    padding-top: 3rem;
-    margin-top: 3rem;
+
+    &-space {
+        margin-top: 3rem;
+    }
+
+    &-text {
+        color: #202020;
+        outline: none;
+    }
 }
 
 ////////// FORM /////////////
@@ -49,22 +57,4 @@
     border: 1px  solid firebrick;
     border-radius: 2px;
     font-size: 2.5rem;
-}
-
-button {
-    text-align: center;
-    font-size: 2.5rem;
-    border: 1px solid firebrick;
-    background-color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    color: firebrick;
-    padding-left: 1rem;
-    padding-right:1rem;
-}
-
-button:hover,
-button:active {
-    background-color: firebrick;
-    color: bisque;
 }

@@ -61,7 +61,47 @@ body {
   }
 }
 
-// Button
+////////// Button ////////////
+
+
+button {
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid firebrick;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  color: firebrick;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+button:hover,
+button:active {
+  background-color: firebrick;
+  color: bisque;
+}
+
+.btn {
+  margin-left: 2rem;
+  text-decoration: none;
+  border: 1px solid firebrick;
+  background-color: white;
+  cursor: pointer;
+  color: firebrick;
+
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: firebrick;
+  color: bisque;
+}
 
 .logout {
   display: inline-flex;

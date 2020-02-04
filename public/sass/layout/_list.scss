@@ -1,12 +1,19 @@
+.containerList {
+  filter: blur(50%);
+}
+
 .gift {
 
   &-title {
     text-align: center;
-
   }
 
   &-list {
     text-align: center;
+    &-name {
+      font-size: 3rem;
+      color: #7a1e1e;
+    }
   }
 }
 
@@ -18,9 +25,32 @@
   filter: blur(50%);
 }
 
+.overlayTextList {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 30%;
+}
+
 .title-list {
   position: relative;
   font-size: 5rem;
   text-align: center;
-  top: 0%;
+}
+
+.btnList {
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  outline: none;
+  color: #202020;
+}
+
+.add {
+  font-size: 2rem;
+  text-decoration: none;
+  outline: none;
+  color: #202020;
 }

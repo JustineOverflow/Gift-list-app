@@ -36,38 +36,17 @@ body {
   padding-right: 1.5rem;
   padding-left: 3rem; }
 
-.logout {
-  display: inline-flex;
-  line-height: inherit; }
-
-.add-a-gift {
-  width: 30rem;
-  max-width: 90%;
-  margin: auto; }
-
-.form-control {
-  margin: 2rem 0; }
-
-.form-control label,
-.form-control input {
-  display: block;
-  width: 80%;
-  margin-bottom: 0.25rem; }
-
-.form-control input {
-  border: 1px  solid firebrick;
-  font-family: Didot;
-  border-radius: 2px;
-  font-size: large; }
-
 button {
-  font-family: Didot;
-  font-size: large;
+  text-align: center;
+  font-size: 2rem;
   border: 1px solid firebrick;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
-  color: firebrick; }
+  color: firebrick;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-decoration: none;
+  font-family: inherit; }
 
 button:hover,
 button:active {
@@ -75,18 +54,62 @@ button:active {
   color: bisque; }
 
 .btn {
-  font-family: Didot;
-  font-size: large;
+  margin-left: 2rem;
+  text-decoration: none;
   border: 1px solid firebrick;
   background-color: white;
-  border-radius: 3px;
   cursor: pointer;
-  color: firebrick; }
+  color: firebrick;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 1rem; }
 
 .btn:hover,
 .btn:active {
   background-color: firebrick;
   color: bisque; }
+
+.logout {
+  display: inline-flex;
+  line-height: inherit; }
+
+.containerCreate img {
+  position: relative; }
+
+.overlayCreate {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 30%; }
+
+.add-a-gift {
+  width: 30rem;
+  max-width: 90%;
+  margin: auto; }
+
+.form-control label {
+  margin: 2rem 0;
+  color: #FFFFFF; }
+
+.form-control input {
+  display: block;
+  width: 80%;
+  margin-bottom: 0.25rem;
+  color: #FFFFFF; }
+
+.form-control input {
+  border: 1px solid firebrick;
+  border-radius: 2px;
+  font-size: large; }
+
+.containerDetails {
+  padding-bottom: 2rem;
+  font-size: 2.1rem; }
+
+.quantity {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
 
 .main-header {
   width: 100%;
@@ -155,11 +178,17 @@ button:active {
   margin-top: 5rem;
   left: 5%; }
 
+.containerList {
+  filter: blur(50%); }
+
 .gift-title {
   text-align: center; }
 
 .gift-list {
   text-align: center; }
+  .gift-list-name {
+    font-size: 3rem;
+    color: #7a1e1e; }
 
 .img-list {
   position: relative;
@@ -168,11 +197,31 @@ button:active {
   height: 100%;
   filter: blur(50%); }
 
+.overlayTextList {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 30%; }
+
 .title-list {
   position: relative;
   font-size: 5rem;
-  text-align: center;
-  top: 0%; }
+  text-align: center; }
+
+.btnList {
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  outline: none;
+  color: #202020; }
+
+.add {
+  font-size: 2rem;
+  text-decoration: none;
+  outline: none;
+  color: #202020; }
 
 .container-login image {
   position: relative; }
@@ -190,6 +239,7 @@ button:active {
   left: 30%; }
 
 .subtitleLogin {
+  padding-bottom: 2rem;
   position: relative;
   z-index: 1;
   font-size: 2.5rem; }
@@ -198,9 +248,12 @@ button:active {
   color: #202020;
   position: relative;
   z-index: 1;
-  font-size: 1.5rem;
-  padding-top: 3rem;
-  margin-top: 3rem; }
+  font-size: 1.5rem; }
+  .reset-space {
+    margin-top: 3rem; }
+  .reset-text {
+    color: #202020;
+    outline: none; }
 
 .form-control {
   margin: 2rem 0; }
@@ -217,18 +270,5 @@ button:active {
   border-radius: 2px;
   font-size: 2.5rem; }
 
-button {
-  text-align: center;
-  font-size: 2.5rem;
-  border: 1px solid firebrick;
-  background-color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  color: firebrick;
-  padding-left: 1rem;
-  padding-right: 1rem; }
-
-button:hover,
-button:active {
-  background-color: firebrick;
-  color: bisque; }
+.containerNewPass {
+  padding: 1rem 4rem 1rem 4rem; }

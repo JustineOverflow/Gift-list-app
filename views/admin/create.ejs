@@ -1,33 +1,44 @@
 <%- include('../include/head.ejs') %>
 
-    <link rel="stylesheet" href="/css/create.css">
+<link rel="stylesheet" href="/css/create.css">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <%- include('../include/nav.ejs') %>
+<%- include('../include/nav.ejs') %>
 
-    <main>
-        <form class="add-a-gift" action="/admin/<% if (editing) {  %>edit <% } else { %>create<% } %>" method="POST">
-            <div class="form-control">
-                <label for="gift-name">Gift: </label>
-                <input type="text" name="name" id="gift-name" value="<% if (editing) {  %><%=gift.name%><% } %>">
-            </div>
-            <div class="form-control">
-                <label for="gift-details">Details: </label>
-                <input type="text" name="details" id="gift-details" value="<% if (editing) {  %><%=gift.details%><% } %>">
-            </div>
-            <div class="form-control">
-                <label for="gift-quantity">Quantity: </label>
-                <input type="number" name="quantity" id="gift-quantity" value="<% if (editing) {  %><%=gift.quantity%><% } %>">
-            </div>
-            <% if (editing) { %>
-                <input type="hidden" value="<%= gift.id %>" name="giftId">
+<main>
+    <div class="containerCreate">
+        <img class="img-login" alt="background gift" src="/img/backgroundGift.jpg">
+        <div class="overlayCreate">
+            <form class="add-a-gift" action="/admin/<% if (editing) { %>edit <% } else { %>create<% } %>" method="POST">
+                <div class="form-control">
+                    <label for="overlayCreate-text">Gift: </label>
+                    <input type="text" name="name" id="gift-name" value="<% if (editing) { %><%= gift.name %><% } %>">
+                </div>
+                <div class="form-control">
+                    <label for="gift-details">Details: </label>
+                    <input type="text" name="details" id="gift-details"
+                           value="<% if (editing) { %><%= gift.details %><% } %>">
+                </div>
+                <div class="form-control">
+                    <label for="gift-quantity">Quantity: </label>
+                    <input type="number" name="quantity" id="gift-quantity"
+                           value="<% if (editing) { %><%= gift.quantity %><% } %>">
+                </div>
+                <% if (editing) { %>
+                    <input type="hidden" value="<%= gift.id %>" name="giftId">
                 <% } %>
 
-            <button type="submit"><% if (editing) { %> Update product <% } else { %>Add this to my list!<% } %></button>
-        </form>
-    </main>
+                <button type="submit">
+                    <% if (editing) { %> Update product
+                    <% } else { %>Add this to my list!
+                    <% } %>
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
 
 <%- include('../include/footer.ejs') %>

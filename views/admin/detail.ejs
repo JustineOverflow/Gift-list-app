@@ -7,11 +7,13 @@
 <%- include('../include/nav.ejs') %>
 
 <main class="centered">
-    <h1><em>Gift: </em> <%= gift.name %> </h1>
+    <div class="containerDetails">
+    <h1 class="title"><em>Gift: </em> <%= gift.name %> </h1>
     <hr>
-    <h2><em>Details: </em><%= gift.details %></h2>
-    <p><em>Quantity: </em><%= gift.quantity %></p>
+    <h2 class="subtitleLogin"><em>Details: </em><%= gift.details %></h2>
+    <p class="quantity"><em>Quantity: </em><%= gift.quantity %></p>
     <a href="/admin/myList/" class="btn">Back to my list</a>
+    </div>
 </main>
 
 <%- include('../include/footer.ejs') %>
