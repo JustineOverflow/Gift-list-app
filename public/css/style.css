@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: Didot;
+  color: #161616;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.title {
+  position: relative;
+  font-size: 5rem;
+  text-align: center; }
+
+.icon-home {
+  color: aliceblue;
+  font-size: 3rem;
+  padding-right: 1rem; }
+
+.icon-user {
+  color: aliceblue;
+  font-size: 2.5rem;
+  padding-right: 1rem; }
+
+.icon-gift {
+  color: peachpuff;
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  padding-left: 3rem; }
+
+.logout {
+  display: inline-flex;
+  line-height: inherit; }
+
+.add-a-gift {
+  width: 30rem;
+  max-width: 90%;
+  margin: auto; }
+
+.form-control {
+  margin: 2rem 0; }
+
+.form-control label,
+.form-control input {
+  display: block;
+  width: 80%;
+  margin-bottom: 0.25rem; }
+
+.form-control input {
+  border: 1px  solid firebrick;
+  font-family: Didot;
+  border-radius: 2px;
+  font-size: large; }
+
+button {
+  font-family: Didot;
+  font-size: large;
+  border: 1px solid firebrick;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  color: firebrick; }
+
+button:hover,
+button:active {
+  background-color: firebrick;
+  color: bisque; }
+
+.btn {
+  font-family: Didot;
+  font-size: large;
+  border: 1px solid firebrick;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  color: firebrick; }
+
+.btn:hover,
+.btn:active {
+  background-color: firebrick;
+  color: bisque; }
+
+.main-header {
+  width: 100%;
+  height: 10rem;
+  background-color: #7a1e1e;
+  padding: 0 1rem;
+  box-shadow: #202020; }
+  .main-header_nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .main-header_item {
+    margin: 0 1rem;
+    padding: 0; }
+    .main-header_item-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex; }
+    .main-header_item_right {
+      margin-right: 0rem;
+      padding: 0; }
+    .main-header_item a {
+      text-decoration: none;
+      color: aliceblue;
+      font-size: 02.5rem; }
+      .main-header_item a:hover, .main-header_item a:active {
+        color: bisque; }
+
+.centered {
+  text-align: center; }
+
+.user-message {
+  margin: auto;
+  width: 90%;
+  border: 1px solid darkslategray;
+  padding: 1rem;
+  border-radius: 3px;
+  background: aliceblue;
+  text-align: center; }
+  .user-message--error {
+    border-color: firebrick;
+    background: aliceblue; }
+
+.container {
+  position: relative; }
+
+.container video {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  width: 100%; }
+
+.overlayText {
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 32%; }
+
+.subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  margin-top: 5rem;
+  left: 5%; }
+
+.gift-title {
+  text-align: center; }
+
+.gift-list {
+  text-align: center; }
+
+.img-list {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(50%); }
+
+.title-list {
+  position: relative;
+  font-size: 5rem;
+  text-align: center;
+  top: 0%; }
+
+.container-login image {
+  position: relative; }
+
+.img-login {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  width: 100%; }
+
+.overlayTextLogin {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 30%; }
+
+.subtitleLogin {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem; }
+
+.reset {
+  color: #202020;
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  padding-top: 3rem;
+  margin-top: 3rem; }
+
+.form-control {
+  margin: 2rem 0; }
+
+.form-control label,
+.form-control input {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 2.5rem;
+  color: #7a1e1e; }
+
+.form-control input {
+  border: 1px  solid firebrick;
+  border-radius: 2px;
+  font-size: 2.5rem; }
+
+button {
+  text-align: center;
+  font-size: 2.5rem;
+  border: 1px solid firebrick;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  color: firebrick;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+button:hover,
+button:active {
+  background-color: firebrick;
+  color: bisque; }

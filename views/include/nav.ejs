@@ -2,34 +2,35 @@
     <nav class="main-header_nav">
         <ul class="main-header_item-list">
             <li class="main-header_item">
+                <i class="fas fa-home icon-home"></i>
                 <a class="active" href="/">Home</a>
                 <% if (isAuthenticated) { %>
             </li>
             <li class="main-header_item">
+                <i class="fas fa-gift icon-gift"></i>
                 <a class="active" href="/admin/myList">My gift list</a>
-            </li>
-            <li class="main-header_item">
-                <a class="active" href="/admin/cart">My cart</a>
             </li>
             <% } %>
         </ul>
         <ul class="main-header_item-list">
             <% if (!isAuthenticated) { %>
                 <li class="main-header_item">
-                    <a class="active" href="/login">Login!</a>
+                    <i class="fas fa-sign-in-alt icon-user"></i>
+                    <a class="active" href="/login">Login</a>
                 </li>
                 <li class="main-header_item">
-                    <a class="active" href="/signup">Signup!</a>
+                    <a class="active" href="/signup">Signup</a>
                 </li>
                 <% } else { %>
                 <li class="main-header_item">
                     <form action="/" method="POST">
+                        <i class="fas fa-user-minus icon-user"></i>
                     <a class="active" href="/"> Delete my account</a>
                     </form>
                 </li>
                 <li class="main-header_item">
                     <form action="/logout" method="POST">
-                        <button type="submit">Logout</button>
+                        <button class ="logout" type="submit">Logout</button>
                     </form>
                 </li>
             <% } %>

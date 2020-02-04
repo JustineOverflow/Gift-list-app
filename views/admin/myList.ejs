@@ -1,4 +1,4 @@
-<%-include('../include/head.ejs')%>
+<%- include('../include/head.ejs') %>
 
 <link rel="stylesheet" href="/css/create.css">
 <link rel="stylesheet" href="/css/edit.css">
@@ -8,30 +8,38 @@
 
 <%- include('../include/nav.ejs') %>
 
-<main>
+<main class="gift">
 
-    <h1>My list</h1>
-    <ol>
+    <div class="containerList">
 
-    <h2>List of my desired gifts: </h2>
-    <%
-        for (var i = 0; i < gifts.length; i++) {
-    %>
-            <li> <%= gifts[i].name %> </li>
+        <img class="img-list" alt="background gift" src="/img/backgroundList.jpg">
+
+        <div class="overlayTextLogin">
+
+        <h1 class="title-list">My list</h1>
+        <ol>
+
+            <h2 class="gift-list">List of my desired gifts: </h2>
+            <%
+            for (var i = 0; i < gifts.length; i++) {
+            %>
+                <li class="gift-list-name"> <%= gifts[i].name %> </li>
                 <div>
-                    <a href="/admin/<%=gifts[i].id%>" class="btn">Detail</a>
+                    <a href="/admin/<%= gifts[i].id %>" class="btn">Detail</a>
                     <form action="/admin/delete" method="POST">
-                        <input type="hidden" value="<%=gifts[i].id%>" name="giftId">
+                        <input type="hidden" value="<%= gifts[i].id %>" name="giftId">
                         <button class="btn" type="submit">Delete</button>
                     </form>
                     <a href="/admin/edit/<%= gifts[i].id %>" class="btn">Edit</a>
                 </div>
-        <p></p>
-    <%
-        }
-    %>
-    </ol>
-    <a href="/admin/create">Add a gift to my list</a>
+                <p></p>
+            <%
+            }
+            %>
+        </ol>
+        <a href="/admin/create">Add a gift to my list</a>
+        </div>
+    </div>
 </main>
 
 <%- include('../include/footer.ejs') %>

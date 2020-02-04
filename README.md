@@ -2,12 +2,9 @@
 
 ## Project concept
 
-
-- Creating a gift list (example: for Christmas)
-- Sharing this list with friends/guests
-- Enabling them to select the gift they want to offer
-- Once they select a gift, it is deleted from the list to avoid double gift
-- The author of the list cannot see the gifts selected by the friends,  to keep the surprise until the end! 
+- Creating a list of desired gifts (example: for Christmas, birthdays);
+- Signing up / loging in to keep track of the list (using sessions with cookies);
+- Editing, deleting this list;
 
 ## Technologies used
 

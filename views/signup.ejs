@@ -8,23 +8,29 @@
 <%- include('include/nav.ejs') %>
 
 <main>
-    <h1>We are happy to have you join!</h1>
-    <h2><em>Please create your account: </em></h2>
-    <form class="signup" action="/signup" method="POST">
-        <div class="form-control">
-            <label for="email">Email </label>
-            <input type="email" name="email" id="email">
+    <div class="container-login">
+        <img class="img-login" alt="background gift" src="/img/background.jpg">
+
+        <div class="overlayTextLogin">
+
+            <h1 class="title">We are happy to have you join!</h1>
+            <h2 class="subtitleLogin"><em>Please create your account: </em></h2>
+            <form class="signup" action="/signup" method="POST">
+                <div class="form-control">
+                    <label for="email">Email </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-control">
+                    <label for="password">Password </label>
+                    <input type="text" name="password" id="password">
+                </div>
+                <div class="form-control">
+                    <label for="confirmPassword">Confirm password </label>
+                    <input type="text" name="confirmPassword" id="confirmPassword">
+                </div>
+                <button type="submit">let's join!</button>
+            </form>
         </div>
-        <div class="form-control">
-            <label for="password">Password </label>
-            <input type="text" name="password" id="password">
-        </div>
-        <div class="form-control">
-            <label for="confirmPassword">Confirm password </label>
-            <input type="text" name="confirmPassword" id="confirmPassword">
-        </div>
-        <button type="submit">let's join!</button>
-    </form>
 </main>
 
 <%- include('include/footer.ejs') %>

@@ -8,21 +8,28 @@
 <%- include('include/nav.ejs') %>
 
 <main>
-    <h1>Welcome back!</h1>
-    <h2><em>Please log-in to access your gift list: </em></h2>
+    <div class="container-login">
+        <img class="img-login" alt="background gift" src="/img/background.jpg">
+
+        <div class="overlayTextLogin">
+            <h1 class="title">Welcome back,</h1>
+
+            <h2 class="subtitleLogin"><em>Please log-in to access your gift list: </em></h2>
             <form class="login" action="/login" method="POST">
                 <div class="form-control">
-            <label for="email">Email </label>
-            <input type="email" name="email" id="email">
+                    <label for="email">Email </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-control">
+                    <label for="password">Password </label>
+                    <input type="text" name="password" id="password">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="reset">
+                <a href="/reset">Forgot password?</a>
+            </div>
         </div>
-        <div class="form-control">
-            <label for="password">Password </label>
-            <input type="text" name="password" id="password">
-        </div>
-        <button type="submit">Login</button>
-    </form>
-    <div class="centered">
-    <a href="/reset">Reset password</a>
     </div>
 </main>
 
