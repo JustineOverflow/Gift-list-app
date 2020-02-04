@@ -46,8 +46,7 @@ To do so:
 
 ![alt text](public/img/screenshots/create.png)
 
-...
 
-#### Thank you for reading!
+## Author
 
 Justine.
