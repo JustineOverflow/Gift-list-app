@@ -7,7 +7,7 @@
 To do so: 
 - Creating a new account (with an email system),
 - Logging in to keep track of the list (using sessions with cookies),
-- Editing, deleting the list.
+- CRUD operations with the list of gifts.
 
 ## Technologies used
 
